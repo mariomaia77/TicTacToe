@@ -1,0 +1,10 @@
+console.log("the boxing game");
+
+
+body {
+  background: url("http://previews.123rf.com/images/albund/albund1502/albund150200018/36164653-An-boxing-ring-surrounded-by-ropes-spotlit-by-floodlights-in-an-arena-setting-at-night-Stock-Photo.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}

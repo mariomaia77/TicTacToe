@@ -1,0 +1,165 @@
+
+
+body {
+background-image: url(../images/BoxingRingFinal.jpg);
+background-size:cover;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+max-width: 100%;
+min-height: 820px;
+margin: 0 auto;
+overflow: auto;
+/*cursor: url("http://www.devleague.com/img/boxing-glove.png"), auto;*/
+}
+
+.containerPage1 .containerPage2 {
+  width: 100%;
+  margin: 10px auto;
+  flex-grow: 1;
+  overflow: auto;
+}
+
+.topContainer {
+  margin-bottom: 0;
+}
+
+h1 {
+  text-align: center;
+  font-size: 55px;
+  background: linear-gradient(to right, rgba(20, 50, 255,0.5) 10%,rgba(0, 0, 0,0.5) 100%);
+  Text-shadow:  0 3px 0 rgba(0,0,0,0.2);
+  border-radius: 10px;
+  height: 60px;
+  margin: 20px 150px;
+  padding: 5px 0 5px 0;
+}
+
+h2 {
+  text-align: center;
+  font-size: 30px;
+  Text-shadow:  0 2px 0 rgba(0,0,0,0.2);
+  /*height: 50px;*/
+  margin: 0 auto;
+}
+
+
+.rightContainer {
+  background: red;
+  opacity: 0.6;
+  border-radius: 25px;
+  height: 630px;
+  width: 25%;
+  /*display: inline-block;*/
+  /*margin-right: 40px;
+  margin-left: 200px;*/
+  margin-right: 10%;
+  color: ghostwhite;
+  text-align: center;
+  float: right;
+}
+
+.leftContainer {
+  background: blue;
+  opacity: 0.6;
+  border-radius: 25px;
+  height: 630px;
+  width: 25%;
+  /*display: inline-block;*/
+  margin-left: 10%;
+  color: ghostwhite;
+  text-align: center;
+  float:left;
+ }
+
+ .selectSquare {
+   border: 1px dashed ghostwhite;
+   opacity: 1;
+   border-radius: 2px;
+   height: 120px;
+   width: 120px;
+   margin: 10px auto 22px auto;
+   text-align: center;
+   /*background-color: blue;*/
+   /*float: left;*/
+   color: none;
+ }
+
+img {
+  height:100%;
+  width: 100%;
+  opacity: 1.5;
+}
+
+.selectSquare:hover {
+  height:140px;
+  width:140px;
+  border: 3px solid ghostwhite;
+  opacity: 1.5;
+}
+
+img:hover {
+  height:110%;
+  width: 110%;
+}
+
+.gameBoard {
+  border-bottom:none;
+  margin: 50px auto;
+  height: 400px;
+  width: 400px;
+  padding: 100px;
+  background-image: url(../images/BoxingRingTop.jpg);
+  background-size:cover;
+}
+
+
+.boardSquare {
+  border: 1px dashed ghostwhite;
+  opacity: 0.1;
+  border-radius: 2px;
+  height: 32.5%;
+  width: 32.5%;
+  margin: 0px;
+  text-align: center;
+  background-color: blue;
+  float: left;
+  color: none;
+}
+
+.gameOver {
+  z-index: 400;
+}
+
+button {
+  font-family: monospace, sans-serif;
+  font-size: 20px;
+  margin: 10px;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+
+a {
+  text-decoration: none;
+}
+
+.playGame {
+  display: flex;
+  margin-top: 450px;
+  margin-left: 45%;
+  margin-right:45%;
+  width: 10%;
+
+}
+
+.selectSquare {
+  position: relative;
+}
+
+.bottomImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
