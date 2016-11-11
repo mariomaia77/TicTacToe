@@ -5,35 +5,7 @@ var playerImages = {
   playerTwo: null
 };
 
-var $playerSelect1 = $("#rocky1");
-var $playerSelect2 = $("#oponent1");
-
-// function gameMsg(x) {
-//   return $(".gameBoard").text(x);
-// }
-
-// after selecting a rocky, the image moves to the center of page
-var $rocky1Select = $( "#rocky1select" );
-var $rocky2Select = $( "#rocky2select" );
-var $rocky3Select = $( "#rocky3select" );
-var $rocky4Select = $( "#rocky4select" );
-
-// var selectImage = function () {
-//   $rocky1Select.move({
-//     width: "250px",
-//     height: "250px",
-//     right: "100px",
-//   }, 1000);
-// };
-//   $("rocky1select").fadeout();
-// $rocky1Select.on( "click", selectImage);
-
-// $el.click ( function () {
-
-
-// rocky1Select.move({bottom: $(window).height() / 2},2000);
-
-// create a jquery variable for each id elated to the squares in the game board
+// create a jquery variable for each id related to the squares in the game board
 var $square1 = $( "#square1" );
 var $square2 = $( "#square2" );
 var $square3 = $( "#square3" );
@@ -44,14 +16,15 @@ var $square7 = $( "#square7" );
 var $square8 = $( "#square8" );
 var $square9 = $( "#square9" );
 
+//user seelcts his boxer. On click, the picture in the front fades out and the picture behind ermeges
 $(".leftContainer img").on("click", function() {
   $(this).animate({
     opacity: 0
   }, 500);
-  var img = $(this).next().attr("src");
+  var img = $(this).next().attr("src"); //the next function capturesthe next picture (the one behind)
   img = "url(" + img + ")";
   playerImages.playerOne = img;
-  localStorage.setItem("playerOneImage", img);
+  localStorage.setItem("playerOneImage", img); // allows the img to be stored by the browser and move HTML pages
 });
 
 $(".rightContainer img").on("click", function() {
@@ -94,24 +67,6 @@ var showBoxer2 = function ($el) {
     alert('You gotta move faster Champ, choose another square!');
 }
 };
-
-// random selection of which player goes first >> nbot active yet as yoiu have to set the players (currently hard coded images...)
-// var winRound = 0;
-clickCount = 0;
-turn = "";
-function randomTurn() {
-  var tossCoin =Math.floor( (Math.random () * 2) + 1);
-  winRound =0;
-  if (tossCoin == 1) {
-    turn = player1;
-    alert(player1 +", you give the first punch!");
-    showBoxer1($element);
-  } else{
-    turn = player1;
-    alert(player1 +", you give the first punch!");
-    showBoxer2($element);
-  }
-}
 
 // players alternating clicks on the board
 var $squares = $(".boardSquare");
@@ -157,14 +112,9 @@ $squares.click ( function () {
     ($squareImage1 == $squareImage5 && $squareImage1 == $squareImage9 && $squareImage1 !== "none" ) ||
     ($squareImage3 == $squareImage5 && $squareImage3 == $squareImage7 && $squareImage3 !== "none" )
     ) {
-      alert("KNOCKOUT!!!!!");
-      clickCount =0;
-      hasWinner = 1;
-      // $("#playButton").text("Play again");
-      // return true;
+      alert("IT'S A KNOCK-OUT !!!!!");
+
     } else {
       console.log("Keep fighting");
-      // $("#playButton").text("Play again");
-      // return false;
   }
 });
